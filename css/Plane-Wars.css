@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/************ 游戏开始界面  **************/
+#main_menu{
+    width: 500px;
+    height: 670px;
+    background: url("../images/bg.jpg") repeat-y ;
+    margin: 0 auto;
+    position: relative;
+}
+#list{
+    list-style: none;
+    position: absolute;
+    left: 175px;
+    top: 200px;
+}
+#list li{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    background: grey;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#scroeNode{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: wheat;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    right: -80px;
+    top: 0;
+}
+#dies{
+    width: 165px;
+    height: 220px;
+    background: url("../images/u=1017656914,1873509013&fm=21&gp=0.jpg");
+    position: absolute;
+    top: -2px;
+    left: 167px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/************ 游戏加载界面  **************/
+.logo {
+    width: 428px;
+    height: 104px;
+    background: url("../images/logo.png") no-repeat;
+    position: absolute;
+    left: 36px;
+    top: 25%;
+}
+
+.loading {
+    width: 200px;
+    height: 42px;
+    background: url("../images/loading1.png") no-repeat;
+    position: absolute;
+    left: 150px;
+    top: 60%;
+}
+
+/*=============游戏开始=================*/
+/*我的飞机*/
+.myplane{
+    width: 98px;
+    height: 122px;
+    position: absolute;
+    background: url("../images/me.png")no-repeat;
+}
+/*子弹*/
+.bullet {
+    width: 7px;
+    height: 18px;
+    background: url("../images/bullet.png") no-repeat;
+    position: absolute;
+}
+/*子弹爆炸*/
+.bullet-die {
+    width: 40px;
+    height: 43px;
+    background: url("../images/die1.png") no-repeat;
+    position: absolute;
+}
+
+/*大型飞机*/
+.enemy-large {
+    width: 165px;
+    height: 256px;
+    background: url("../images/plane3.png") no-repeat;
+    position: absolute;
+}
+
+/*中型飞机*/
+.enemy-middle {
+    width: 70px;
+    height: 92px;
+    background: url("../images/plane2.png") no-repeat;
+    position: absolute;
+}
+
+/*小型飞机*/
+.enemy-small {
+    width: 59px;
+    height: 36px;
+    background: url("../images/plane1.png") no-repeat;
+    position: absolute;
+}

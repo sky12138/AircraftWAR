@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>飞机大战</title>
+</head>
+<link href="css/Plane-Wars.css" type="text/css" rel="stylesheet">
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/ganeEngie.js" type="text/javascript"></script>
+<script src="js/myPlane.js" type="text/javascript"></script>
+<script src="js/bullets.js" type="text/javascript"></script>
+<script src="js/enemys.js" type="text/javascript"></script>
+<script>
+    window.onload=function (){
+        var dies=document.getElementById("dies");
+        var oList=document.getElementById("list");
+        var oLi=oList.getElementsByTagName("li");
+        for (var j=0;j<oLi.length;j++){
+            oLi[j].index=j;
+            oLi[j].onmouseover=function () {
+                if(this.index==1){
+                    dies.style.backgroundImage="url(images/u=762906616,3909003709&fm=21&gp=0.jpg)";
+                }else if(this.index==0) {
+                    dies.style.backgroundImage="url(images/0d466aa5eb29ba439e83102121f4fd44.gif)";
+                }else if(this.index==2){
+                    dies.style.backgroundImage="url(images/u=1017656914,1873509013&fm=21&gp=0.jpg)";
+                }
+            }
+        }
+
+        for (var i=0;i<oLi.length;i++){
+            oLi[i].onclick=function () {
+                //1, 把oList消失
+                oList.parentNode.removeChild(oList);
+                //1, 把dies消失
+                dies.parentNode.removeChild(dies);
+                var fireInterval = this.value;
+                myPlane.fireInterval = fireInterval - 0;
+                //游戏开始
+                gameEngie.init().start();
+            }
+        }
+
+
+
+    };
+    /*
+    4个对象
+     1.游戏引擎
+       属性：游戏区域所有子弹bulles{}，敌机enemys{}，isCrashmyPlan是否碰撞，scroeNode分数
+     2.我方飞机
+     3.敌机
+     4.子弹
+     */
+</script>
+<body>
+<div id="main_menu">
+    <div id="dies"></div>
+    <ul id="list">
+        <li value="1000">炼狱模式</li>
+        <li value="800">修罗模式</li>
+        <li value="500">普通模式</li>
+        <li value="80">春哥附体</li>
+    </ul>
+    <div id="scroeNode">0分</div>
+</div>
+</body>
+</html>
